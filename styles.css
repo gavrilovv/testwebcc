@@ -311,7 +311,7 @@ header {
 
 
 #create-comment-loading p{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     margin-left: 6vw;
     margin-top: 2.2vh;
@@ -321,11 +321,12 @@ header {
 
 
 #create-comment-loading img{
-    height: 300px;
-    width: 300px;
+    height: 220px;
+    width: 220px;
     margin: auto;
     margin-top: 6vh;
 }
+
 
 #button-create-comment-load{
     background-color: blue;
