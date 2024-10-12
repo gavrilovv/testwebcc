@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Channel Comments</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="name-channel">Error</h1>
+        <div class="container stat">
+                <div class="statistics">
+                    <button class="stat-button stat-grey">0</button>
+                    <button class="stat-button stat-green">0</button>
+                    <button class="stat-button stat-red">0</button>
+                    <button class="stat-button stat-orange">0</button>
+                </div>
+            </div>
+    </header>
+
+    <div class="container-comment all">
+        <!-- Здесь будут все комментарии -->
+    </div>
+    
+    <div class="container-comment positive">
+        <!-- Здесь будут положительные комментарии -->
+    </div>
+    
+    <div class="container-comment negative">
+        <!-- Здесь будут отрицательные комментарии -->
+    </div>
+    
+    <div class="container-comment discreet">
+        <!-- Здесь будут нейтральные комментарии -->
+    </div>
+
+
+
+    <div id="create-comment-slide">
+        <div id="drag-handle"></div>
+    
+        <div id="create-comment-loading" style="visibility: visible;">
+            <p>Что Вы</p>
+            <p>думаете о</p>
+            <p id="name-channel-create-comment" style="color: blue; font-size: 44px;">Name Channel</p>
+            <img src="img/create-animation.gif" />
+            <button id="button-create-comment-load">Создать комментарий</button>  
+        </div>
+    
+        <div id="create-comment-container" style="visibility: hidden;">
+            <div id="create-comment-first-window">
+                <p>Введите комментарий:</p>
+                <textarea id="input-comment"></textarea>
+            </div>
+    
+            <div id="create-comment-second-window">
+                <p>Какую категорию вы присвоите этому комментарию?</p>
+                <div id="category-create-comment-container">
+                    <button id="positive" class="category">положительно</button>
+                    <button id="negative" class="category">отрицательно</button>
+                    <button id="discreet" class="category">средне</button>
+                </div>
+            </div>
+    
+            <div id="create-comment-third-window">
+                <div id="info-user-create-comment">
+                    <div id="user-avatar-create-comment"></div>
+                    <div id="username-create-comment">User Name</div>
+                </div>
+                <hr class="separator">
+                <div id="checking-the-comment">
+                </div>
+            </div>
+        </div>
+    
+        <div id="svipe-container" style="visibility: hidden;">
+            <div id="svipe-module" style="visibility: visible;">
+                <p>&lt;&lt; Свайп &gt;&gt;</p>
+            </div>
+
+        </div>
+        
+        <div id="buttons-module" style="visibility: hidden;">
+            <button id="back">&lt;</button>
+            <button id="publish">Опубликовать</button>
+        </div>
+    
+        <div id="footer-create-comment" style="visibility: hidden;">
+            <div id="movement-tab-first" class="movement-tab"></div>
+            <div id="movement-tab-second" class="movement-tab"></div>
+            <div id="movement-tab-third" class="movement-tab"></div>
+        </div>
+
+        <div class="loading-post-server" style="display: none;">
+            <img class="load-gif" src="img/load.gif"/>
+            <p class="load-informati">Это заняло чуть больше времени...</p>
+        </div>
+    </div>
+    
+    
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+    <div class="sticky-footer-navigation">
+        <button id="create"><img src="img/create.png"></button>
+        <button id="open-profil"><img src="img/user.png"></button>
+    </div>
+
+
+    <!-- Плашки для системных оповещений на стороне клиента -->
+
+    <div id="loading" class="loading-overlay">
+        <img class="load-gif" src="img/load.gif"/>
+    </div>
+
+    <div id="error-message" class="error-overlay" style="display: none;">
+        <p>Ошибка при загрузке данных.</p>
+    </div>
+
+    <script src="funk.js"></script>
+</body>
+</html>
+
+

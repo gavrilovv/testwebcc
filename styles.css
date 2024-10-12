@@ -1,0 +1,1010 @@
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --font-size-base: 2vh;
+    --font-size-large: 5.5vh;
+    --font-size-button: 3vh;
+    --font-weight: 600;
+    --padding-body: 0;
+    --margin-body: 0;
+    --margin-bottom-name: 1.5vh;
+    --padding-top-name: 3vh;
+    --border-radius: 2vh;
+    --border-width: 0.4vh;
+    --button-height: 3.4vh;
+    --gap-statistics: 2.1vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: var(--padding-body);
+    margin: var(--margin-body);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+}
+
+header {
+    padding-left: 1vh;
+}
+
+#name-channel {
+    margin: 0;
+    margin-bottom: var(--margin-bottom-name);
+    font-size: var(--font-size-large);
+    padding-top: var(--padding-top-name);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+.container {
+    margin: var(--margin-body);
+    padding: var(--padding-body);
+}
+
+.statistics {
+    display: flex;
+    gap: var(--gap-statistics);
+}
+
+.stat-button {
+    display: flex; /* Используем Flexbox для кнопок */
+    align-items: center; /* Центрируем текст по вертикали */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    padding: 1.6vh 1vh; /* внутренний отступ */
+    border: var(--border-width) solid transparent; /* прозрачная рамка по умолчанию */
+    border-radius: var(--border-radius); /* скругление углов */
+    height: var(--button-height);
+    background: none; /* убираем фоновый цвет */
+    color: black; /* цвет текста */
+    font-size: var(--font-size-button); /* размер шрифта */
+    font-weight: var(--font-weight);
+    cursor: pointer; /* курсор при наведении */
+    outline: none; /* убираем обводку при фокусе */
+}
+
+.stat-grey {
+    border-color: grey;
+    color: grey; /* цвет текста совпадает с обводкой */
+}
+
+.stat-green {
+    border-color: green;
+    color: green; /* цвет текста совпадает с обводкой */
+}
+
+.stat-red {
+    border-color: red;
+    color: red; /* цвет текста совпадает с обводкой */
+}
+
+.stat-orange {
+    border-color: orange;
+    color: orange; /* цвет текста совпадает с обводкой */
+}
+
+/* Дополнительные стили при наведении */
+.stat-button:hover {
+    filter: brightness(90%); /* немного затемняем кнопку при наведении */
+}
+
+
+
+
+.container-comment{
+    margin-top: 2.5vh;
+    padding: 0;
+    height: auto;
+    width: auto;
+
+}
+
+
+
+
+.comment .more-options {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.comment .comment-body {
+    display: flex;
+    flex-direction: column;
+    border-left: 0.8vw solid rgba(182, 181, 181, 0.534);
+    padding-left: 1.5vw;
+    font-size: 2vh;
+    color: #333;
+    line-height: 1;
+    font-size: 400;
+    margin-left: 5.5vh;
+    margin-right: 4vh;
+    margin-bottom: 0; /* Убираем отступ снизу */
+}
+
+.comment .timestamp {
+    font-size: 1.3vh;
+    color: #777;
+    margin-top: 1vh; /* Отступ сверху, чтобы таймстамп не сливался с текстом */
+    align-self: flex-start; /* Расположение таймстампа в начале строки */
+    margin-top: 1.5vh;
+    margin-bottom: 0;
+}
+
+
+.comment .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+
+
+
+.not-found-comment {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    height: 100vh; /* Высота в 100% от высоты окна */
+    text-align: center; /* Центрируем текст */
+    padding-top: 65%; /* Отступ сверху (можно изменить значение) */
+    font-size: 1.5em; /* Размер шрифта (по желанию) */
+    color: #888; /* Цвет текста (по желанию) */
+}
+
+
+.comment .user-avatar {
+    width: 5vh;
+    height: 5vh;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.comment .username {
+    margin-left: 1vh;
+    font-size: 2.3vh;
+    font-weight: 600;
+}
+
+.comment-button{
+    display: flex;
+}
+
+
+.comment .comment-content {
+    margin: 0; /* Убираем отступы у параграфа */
+    font-size: 2vh; /* Размер шрифта для содержимого комментария */
+    color: #333; /* Цвет текста */
+    word-wrap: break-word; /* Позволяет переносить слова, если они длинные */
+    overflow-wrap: break-word; /* Современный аналог word-wrap */
+    width: 100%; /* Убедитесь, что ширина элемента позволяет перенос */
+}
+
+
+.start-markap-text{
+    width: 100px; /* Ширина полоски */
+    background-color: gray; /* Цвет полоски */
+    margin-right: 10px; /* Отступ между полоской и текстом */
+}
+
+.comment .more-options {
+    height: 2.5vh; /* Фиксированная высота для кнопки */
+    width: 2.5vh; /* Фиксированная ширина для кнопки */
+    background: none; /* Убираем фоновый цвет у кнопки */
+    border: none; /* Убираем обводку кнопки */
+    padding: 0; /* Убираем любые отступы внутри кнопки */
+    cursor: pointer; /* Добавляем курсор-указатель */
+}
+
+.more-options img {
+    height: 80%; /* Изображение займет почти всю высоту кнопки */
+    width: 25%; /* Изображение займет 50% ширины */
+    background: none; /* Убираем фоновый цвет у изображения */
+    border: none; /* Убираем границу у изображения */
+}
+
+
+
+
+.not-found-comments{
+    position: relative;
+}
+
+
+.comment {
+    border-radius: 2vh;
+    padding: 1.2vh 1.5vh 0.7vh 1.5vh;
+    background-color: white;
+    margin-bottom: 1vh; /* Отступ между комментариями */
+    
+    z-index: 0;
+}
+
+.container-comment{
+    margin-bottom: 20%;
+}
+
+.container-comment.positive .comment {
+    border: 0.4vh solid rgba(2, 167, 2, 0.336); /* Цвет для положительных комментариев */
+}
+
+.container-comment.negative .comment {
+    border: 0.4vh solid rgba(167, 137, 2, 0.336); /* Цвет для отрицательных комментариев */
+}
+
+.container-comment.discreet .comment {
+    border: 0.4vh solid rgba(243, 201, 15, 0.555); /* Цвет для нейтральных комментариев */
+}
+
+.sticky-footer-navigation {
+    border-top: 0.2vh solid #3333332f;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    background-color: white;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out; /* Добавляем плавный переход */
+}
+
+.sticky-footer-navigation.hide {
+    transform: translateY(100%); /* Скрываем панель за пределы экрана */
+}
+
+
+.sticky-footer-navigation button{
+    border: var(--border-width) solid transparent; /* прозрачная рамка по умолчанию */
+    background: none; /* убираем фоновый цвет */
+    cursor: pointer; /* курсор при наведении */
+    outline: none; /* убираем обводку при фокусе */
+}
+
+.sticky-footer-navigation img{
+    margin: 0 2vw; /* Уменьшаем горизонтальный отступ между кнопками */
+    padding: 3vw; /* Устанавливаем внутренние отступы для кнопок */
+    height: 3vh;
+    width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* CREATE COMMENT */
+
+ /* loading */
+#create-comment-loading{
+    display: flex;               /* Используем flexbox */
+    overflow: auto; /* Добавляем прокрутку, если контента много */
+    flex-direction: column;       /* Если элементы должны располагаться вертикально */
+    position: absolute;
+    margin-top: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999; /* Поверх остальных элементов */
+    background-color: white; /* Чтобы оно не было прозрачным */
+    border-radius: 15px;
+}
+
+
+
+#create-comment-loading p{
+    font-size: 40px;
+    font-weight: 700;
+    margin-left: 6vw;
+    margin-top: 2.2vh;
+    
+}
+
+
+
+#create-comment-loading img{
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    margin-top: 6vh;
+}
+
+#button-create-comment-load{
+    background-color: blue;
+    color: #fff;
+    display: flex; /* Используем Flexbox для кнопок */
+    align-items: center; /* Центрируем текст по вертикали */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    padding: 1.6vh 1vh; /* внутренний отступ */
+    border: var(--border-width) solid transparent; /* прозрачная рамка по умолчанию */
+    border-radius: 15px; /* скругление углов */
+    height: 7vh;
+    width: 80vw;
+    font-size: 24px; /* размер шрифта */
+    font-weight: 700;
+    cursor: pointer; /* курсор при наведении */
+    outline: none; /* убираем обводку при фокусе */
+    margin: auto;
+    margin-top: 2vh;
+}
+
+
+/* Slide create comment*/
+#create-comment-slide {
+    height: 83vh;
+    border-radius: 20px;
+    border-top: 5px solid rgb(88, 88, 88);
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    transition: bottom 0.5s ease-in-out;
+    z-index: 999;
+    touch-action: none;
+    display: block;
+}
+
+#create-comment-text-lg {
+    margin-left: 6vw;
+    margin-bottom: 5vh; /* Уменьшили отступ от текста до гифки */
+    padding: 0;
+    text-align: left; /* Текст выровнен по левому краю */
+}
+
+#create-comment-gif-lg {
+    display: flex;
+    justify-content: center; /* Центрирование гифки по горизонтали */
+    margin-top: 3vh; /* Отступ от блока с текстом */
+}
+
+#create-comment-gif-lg img {
+    width: 80vw; /* Устанавливаем ширину для гифки */
+    height: auto; /* Сохраняем пропорции */
+    margin-bottom: 3vh;
+}
+
+#create-comment-slide h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 2.5vh;
+}
+
+#create-comment-slide.show {
+    bottom: 0; /* При добавлении класса 'show' плашка плавно поднимется */
+}
+
+#drag-handle {
+    width: 25%;
+    height: 8px;
+    background-color: rgb(88, 88, 88);
+    border-radius: 5px;
+    margin: 10px auto;
+    margin-bottom: 15px;
+}
+
+
+#create-comment-lg-button {
+    display: flex; /* Используем Flexbox для кнопок */
+    align-items: center; /* Центрируем текст по вертикали */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    padding: 1.6vh 1vh; /* внутренний отступ */
+    border: var(--border-width) solid transparent; /* прозрачная рамка по умолчанию */
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    width: auto;
+    height: 6vh;
+    width: 70vw;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer; /* курсор при наведении */
+    outline: none; /* убираем обводку при фокусе */
+    display: block; /* Делаем кнопку блочным элементом */
+    margin: 0 auto; /* Центрируем кнопку по горизонтали */
+    margin-bottom: 7vh;
+}
+
+
+
+
+/* CREATE COMMENT*/ 
+
+
+/* information */
+#user-avatar{
+    width: 5vh;
+    height: 5vh;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#create-comment-html{
+    margin-bottom: 10vh;
+}
+
+
+
+#category-create-comment-lg {
+    display: flex;
+    gap: var(--gap-statistics);
+}
+
+#category-create-comment button{
+    display: flex; /* Используем Flexbox для кнопок */
+    align-items: center; /* Центрируем текст по вертикали */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    padding: 1.6vh 1vh; /* внутренний отступ */
+    border: var(--border-width) solid transparent; /* прозрачная рамка по умолчанию */
+    border-radius: var(--border-radius); /* скругление углов */
+    height: var(--button-height);
+    background: none; /* убираем фоновый цвет */
+    color: black; /* цвет текста */
+    font-size: var(--font-size-button); /* размер шрифта */
+    font-weight: var(--font-weight);
+    cursor: pointer; /* курсор при наведении */
+    outline: none; /* убираем обводку при фокусе */
+}
+
+
+#data-user-create-comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+
+/* create comment container */
+
+#create-comment-first-window, #create-comment-second-window, #create-comment-third-window {
+    display: flex;               /* Используем flexbox */
+    justify-content: center;      /* Центрируем по горизонтали */
+    align-items: center;          /* Центрируем по вертикали, если нужно */
+    overflow: auto; /* Добавляем прокрутку, если контента много */
+    flex-direction: column;       /* Если элементы должны располагаться вертикально */
+}
+
+
+#create-comment-container{
+    margin-bottom: 6vh;
+    height: 55vh;
+}
+
+#create-comment-container > div {
+    transition: opacity 0.5s ease; /* Плавный переход */
+}
+
+#create-comment-first-window p{
+    font-size: 34px;
+    font-weight: 600;
+    margin-top: 1vh;
+}
+
+
+#input-comment {
+    width: 100%; /* Ширина поля по всей ширине контейнера */
+    height: 50vh; /* Высота поля */
+    border: 3px solid #000; /* Черная обводка */
+    border-radius: 10px; /* Скругленные углы */
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    box-sizing: border-box; /* Учет внутренних отступов в общей ширине */
+    resize: none; /* Запрет изменения размеров поля */
+    overflow-y: auto; /* Включение вертикальной прокрутки */
+    vertical-align: top; /* Выравнивание текста по верхней части */
+    font-size: 20px;
+}
+
+
+#create-comment-first-window {
+    padding: 10px; /* Отступы вокруг текста и поля ввода */
+
+}
+
+
+
+#category-create-comment-container{
+    display: flex;                /* Включаем flexbox */
+    flex-direction: column;        /* Вертикальное расположение элементов */
+    align-items: center;           /* Центрируем кнопки по горизонтали */
+    gap: 30px;                    /* Отступы между кнопками */
+    width: 100%;                  /* Занимает всю ширину */
+}
+
+.category {
+    font-size: 28px;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    background: none;             /* Убираем фон */
+    cursor: pointer;
+    padding: 10px 20px;           /* Внутренние отступы */
+    width: 80%;
+    height: 8vh;                   /* Кнопки занимают 70% ширины контейнера */
+    text-align: center;           /* Текст по центру кнопок */
+}
+
+
+
+
+#create-comment-second-window p{
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 0;
+
+}
+
+
+
+#category-create-comment-container #positive{
+    color: green;
+    border: 4.5px solid green;
+}
+
+#category-create-comment-container #negative{
+    color: red;
+    border: 4.5px solid red;
+}
+
+#category-create-comment-container #discreet{
+    color: orange;
+    border: 4.5px solid orange;
+}
+
+
+
+
+
+
+#user-avatar-create-comment {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#username-create-comment {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#info-user-create-comment {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+#info-user-create-comment, #checking-the-comment {
+    flex-shrink: 1;  /* Чтобы содержимое не выходило за границы контейнера */
+}
+
+
+
+
+.separator {
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid rgba(88, 88, 88, 0.445);
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* create comment navigation */
+
+
+
+#svipe-container {
+    width: 100%;
+    height: 63px;
+    position: relative;
+    touch-action: pan-x;
+    margin-bottom: 4vh;
+    margin-top: 8vh;
+}
+
+
+#svipe-module {
+    width: 70%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 3px solid #33333370;
+    position: absolute;
+    left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#svipe-module p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #33333370;
+    margin: 0;
+}
+
+
+    
+
+#footer-create-comment {
+    bottom: 10px; /* Отступ снизу */
+    width: 100%; /* Ширина на весь экран */
+    display: flex;
+    justify-content: center;
+
+}
+
+.movement-tab {
+    background-color: #3333334d; /* Цвет фона кружков */
+    height: 18px; /* Задаем высоту кружка */
+    width: 18px; /* Задаем ширину кружка (равную высоте) */
+    border-radius: 50%; /* Делаем элемент круглым */
+    margin: 0 5px; /* Горизонтальный отступ между кружками */
+}
+/* CREATE COMMENT */
+
+/* information */
+#user-avatar {
+    width: 5vh;
+    height: 5vh;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#create-comment-html {
+    margin-bottom: 10vh;
+}
+
+#category-create-comment-lg {
+    display: flex;
+    gap: var(--gap-statistics);
+}
+
+#category-create-comment button {
+    display: flex; /* Используем Flexbox для кнопок */
+    align-items: center; /* Центрируем текст по вертикали */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    padding: 1.6vh 1vh; /* внутренний отступ */
+    border: var(--border-width) solid transparent; /* прозрачная рамка по умолчанию */
+    border-radius: var(--border-radius); /* скругление углов */
+    height: var(--button-height);
+    background: none; /* убираем фоновый цвет */
+    color: black; /* цвет текста */
+    font-size: var(--font-size-button); /* размер шрифта */
+    font-weight: var(--font-weight);
+    cursor: pointer; /* курсор при наведении */
+    outline: none; /* убираем обводку при фокусе */
+}
+
+#data-user-create-comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+/* create comment slide */
+#create-comment-slide {
+    display: flex;               /* Используем flexbox для расположения элементов */
+    flex-direction: column;      /* Располагаем элементы по вертикали */
+    height: 83vh;               /* Задаем высоту всего контейнера */
+}
+
+#create-comment-container {
+    flex: 1;                    /* Позволяет этому контейнеру занимать все доступное пространство */
+    overflow-y: auto;           /* Включаем вертикальную прокрутку для контейнера */
+    margin-bottom: 10px;        /* Отступ снизу, чтобы не перекрывать свап и футер */
+}
+
+
+
+#create-comment-first-window p {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 1vh;
+}
+
+#input-comment {
+    width: 100%; /* Ширина поля по всей ширине контейнера */
+    height: 50vh; /* Высота поля */
+    border: 3px solid #000; /* Черная обводка */
+    border-radius: 10px; /* Скругленные углы */
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    box-sizing: border-box; /* Учет внутренних отступов в общей ширине */
+    resize: none; /* Запрет изменения размеров поля */
+    overflow-y: auto; /* Включение вертикальной прокрутки */
+    vertical-align: top; /* Выравнивание текста по верхней части */
+    font-size: 20px;
+}
+
+
+
+#category-create-comment-container {
+    display: flex;                /* Включаем flexbox */
+    flex-direction: column;        /* Вертикальное расположение элементов */
+    align-items: center;           /* Центрируем кнопки по горизонтали */
+    gap: 30px;                    /* Отступы между кнопками */
+    width: 100%;                  /* Занимает всю ширину */
+}
+
+.category {
+    font-size: 28px;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    background: none;             /* Убираем фон */
+    cursor: pointer;
+    padding: 10px 20px;           /* Внутренние отступы */
+    width: 80%;                   /* Ширина кнопок */
+    height: 8vh;                  /* Кнопки занимают 70% ширины контейнера */
+    text-align: center;           /* Текст по центру кнопок */
+}
+
+#create-comment-second-window {
+    padding: 0 10px;
+    display: flex;               /* Включаем flexbox для вертикального расположения */
+    flex-direction: column;      /* Располагаем элементы по вертикали */
+    align-items: center;         /* Центрируем кнопки по горизонтали */
+    justify-content: center;      /* Центрируем кнопки по вертикали */
+    height: 100%;                /* Задаем высоту 100% */
+}
+
+#create-comment-second-window p {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 9vh;
+    margin-top: 2vh;
+
+}
+
+#category-create-comment-container #positive {
+    color: green;
+    border: 4.5px solid green;
+}
+
+#category-create-comment-container #negative {
+    color: red;
+    border: 4.5px solid red;
+}
+
+#category-create-comment-container #discreet {
+    color: orange;
+    border: 4.5px solid orange;
+}
+
+#user-avatar-create-comment {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#username-create-comment {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+#info-user-create-comment {
+    margin-top: 3vh;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.separator {
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid rgba(88, 88, 88, 0.445);
+    margin-top: 10px;
+}
+
+#checking-the-comment {
+    margin-top: 1.5vh;
+    height: 46vh;
+
+    width: 90%;
+    font-size: 22px;
+    border-left: 0.8vw solid rgba(182, 181, 181, 0.534);
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-bottom: 2vh;
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+}
+
+/* create comment navigation */
+#svipe-container {
+    margin-top: 2vh;           /* Отталкиваем от предыдущих элементов */
+    width: 100%; /* По ширине экрана */
+    height: 63px; /* Высота контейнера */
+}
+
+#svipe-module {
+    width: 70%;
+    height: 95%;
+    background-color: #33333370;
+    border-radius: 15px;
+    border: 3px solid #fff;
+    position: absolute;
+    left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#svipe-module p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+
+#footer-create-comment {
+    margin-bottom: 3vh;           /* Отступ сверху для отдаления от предыдущего элемента */
+    width: 100%; /* Ширина на весь экран */
+    display: flex;
+    justify-content: center;
+}
+
+.movement-tab {
+    background-color: #3333334d; /* Цвет фона кружков */
+    height: 18px; /* Задаем высоту кружка */
+    width: 18px; /* Задаем ширину кружка (равную высоте) */
+    border-radius: 50%; /* Делаем элемент круглым */
+    margin: 0 5px; /* Горизонтальный отступ между кружками */
+}
+
+.movement-tab.active {
+    background-color: #4e4d4d4d; /* Цвет фона кружков */
+    border: 3px solid #3333332f;
+    height: 14px; /* Задаем высоту кружка */
+    width: 14px; /* Задаем ширину кружка (равную высоте) */
+    
+}
+
+
+#buttons-module{
+    gap: 3px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 4vh;
+}
+
+#buttons-module button{
+    color: #fff;
+    display: flex; /* Используем Flexbox для кнопок */
+    align-items: center; /* Центрируем текст по вертикали */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    padding: 1.6vh 1vh; /* внутренний отступ */
+    border: var(--border-width) solid transparent; /* прозрачная рамка по умолчанию */
+    border-radius: 15px; /* скругление углов */
+    height: 7vh;
+    font-size: 24px; /* размер шрифта */
+    font-weight: 700;
+    cursor: pointer; /* курсор при наведении */
+    outline: none; /* убираем обводку при фокусе */
+    margin: auto;
+    margin-top: 2vh;    
+}
+
+#back{
+    background-color: #33333370;
+    width: 15vw;
+
+}
+
+#publish{
+    background-color: blue;
+    width: 50vw;
+}
+
+.loading-post-server {
+    display: flex; /* Используем flexbox для центрирования */
+    flex-direction: column; /* Располагаем элементы в колонку */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    text-align: center; /* Центрируем текст в параграфе */
+    position: relative;
+    top: 35%;
+    margin: 0 auto; /* Убираем отступы */
+    gap: 25vh;
+}
+
+.load-gif {
+    width: auto;
+    height: 100px;
+}
+
+.loading-post-server p {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333333a8;
+}
+
+
+
+/* SYSTEM OUTPUT FOR USER*/
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Чтобы плашка была поверх всего */
+}
+
+
+
+.loader {
+    font-size: 24px;
+    color: #333;
+}
+
+
+
+
+
+.error-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Полупрозрачный красный фон */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Чтобы ошибка была поверх всего */
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
